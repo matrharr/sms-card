@@ -13,7 +13,7 @@ module ShareContact
     # ]
 
     msg.map!{|line| line.strip}
-
+    p msg
     # [
     #     [0] "Sc n matt harris",
     #     [1] "p +16154064891",
@@ -24,15 +24,17 @@ module ShareContact
 
     msg.map! do |line|
       if line[0].downcase == 'p'
+        p "test"
         line = line.split('')
         recipient = line[1]
+        p recipient
       end
     end
 
     # generalize
-    p sender
+    
     user = User.find_by(phone_number: sender)
-    p user
+  
     message_sent = "#{user.first_name} has sent you an SMSCard:\n
                     #{user.first_name} #{user.last_name}\n
                     #{user.job_title} at #{user.company}\n
