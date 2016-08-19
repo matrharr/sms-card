@@ -26,7 +26,7 @@ module ShareContact
       if line[0].downcase == 'p'
         p "test"
         line = line.split('')
-        recipient = line[1]
+        recipient = line[2..-1]
         p recipient
       end
     end
