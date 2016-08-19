@@ -4,7 +4,7 @@ module ShareContact
 
     # input: "Sc n matt harris; p +16154064891; soc"
 
-    message_received.split(';')
+    msg = message_received.split(';')
 
     # [
     #     [0] "Sc n matt harris",
@@ -12,7 +12,7 @@ module ShareContact
     #     [2] " soc"
     # ]
 
-    message_received.map!{|line| line.strip}
+    msg.map!{|line| line.strip}
 
     # [
     #     [0] "Sc n matt harris",
@@ -22,7 +22,7 @@ module ShareContact
 
     # make more flexible
 
-    message_received.map! do |line|
+    msg.map! do |line|
       if line[0].downcase == 'p'
         line = line.split('')
         recipient = line[1]
