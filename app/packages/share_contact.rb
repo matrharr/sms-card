@@ -1,4 +1,4 @@
-class ShareContact
+module ShareContact
 
   def bundle_info(message_received, sender)
 
