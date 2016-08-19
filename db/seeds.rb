@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.create(first_name: 'Matt', 
             last_name: 'Harris', 
-            phone_number: '+6154064891', 
+            phone_number: '+16154064891', 
             email: 'matrharr@gmail.com', 
             github: 'https://github.com/matrharr', 
             linkedin: 'https://www.linkedin.com/in/matrharr', 
