@@ -1,6 +1,7 @@
 require_relative '../packages/share_contact'
 
-class Parser
+module Parser
+  include ShareContact
 
   def parse_message(text, user)
 

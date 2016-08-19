@@ -3,6 +3,8 @@ require_relative '../actions/parser'
 
 
 class BroadcastsController < ApplicationController
+  include BroadcastService
+  include Parser
 
   def create
     p params

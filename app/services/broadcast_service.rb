@@ -1,4 +1,4 @@
-class BroadcastService
+module BroadcastService
 
   def create_client
     account_sid = ENV['ACCOUNT_SID']
