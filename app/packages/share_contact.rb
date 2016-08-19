@@ -35,9 +35,9 @@ module ShareContact
     p user
     message_sent = "#{user.first_name} has sent you an SMSCard:\n
                     #{user.first_name} #{user.last_name}\n
-                    #{job_title} at #{company}\n
-                    #{phone_number}\n
-                    #{email}\n
+                    #{user.job_title} at #{company}\n
+                    #{user.phone_number}\n
+                    #{user.email}\n
                     gh: #{user.github}\n
                     in: #{user.linkedin}\n
                     portfolio: #{user.portfolio}"
