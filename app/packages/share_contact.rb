@@ -13,7 +13,7 @@ module ShareContact
     # ]
 
     msg.map!{|line| line.strip}
-    p msg
+    
     # [
     #     [0] "Sc n matt harris",
     #     [1] "p +16154064891",
@@ -44,7 +44,11 @@ module ShareContact
                     in: #{user.linkedin}\n
                     portfolio: #{user.portfolio}"
 
-    return [recipient, message_sent]
+
+    p recipient
+    payload = [recipient, message_sent]
+
+    return payload
 
   end
 
