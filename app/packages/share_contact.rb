@@ -1,6 +1,6 @@
 class ShareContact
 
-  def bundle_info(message_received)
+  def bundle_info(message_received, sender)
 
     # input: "Sc n matt harris; p +16154064891; soc"
 
@@ -31,11 +31,16 @@ class ShareContact
 
     # generalize
 
-    message_sent = "Matt Harris\n
-            p: (615)406-4891
-            gh: github.com/matrharr\n
-            in: linkedin.com/in/matrharr\n
-            cv: matrharr.github.io/\n"
+    user = User.find_by(phone_number: sender)
+
+    message_sent = "#{user.first_name} has sent you an SMSCard:\n
+                    #{user.first_name} #{user.last_name}\n
+                    #{job_title} at #{company}\n
+                    #{phone_number}\n
+                    #{email}\n
+                    gh: #{user.github}\n
+                    in: #{user.linkedin}\n
+                    portfolio: #{user.portfolio}"
 
     return [recipient, message_sent]
 

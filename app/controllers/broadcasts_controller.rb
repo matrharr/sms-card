@@ -1,3 +1,7 @@
+require_relative '../services/broadcast_service'
+require_relative '../actions/parser'
+
+
 class BroadcastsController < ApplicationController
 
   def create
@@ -10,6 +14,11 @@ class BroadcastsController < ApplicationController
     payload = parse_message(message, user)
 
     send_message(payload)
+  end
+
+  def index
+    p params
+    create_client
   end
 
 end
