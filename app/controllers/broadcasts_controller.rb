@@ -1,6 +1,7 @@
 class BroadcastsController < ApplicationController
 
   def create
+    p params
     create_client
 
     message = params[:Body]

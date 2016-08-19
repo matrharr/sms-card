@@ -1,9 +1,5 @@
 class Parser
 
-  # including package
-
-  include ShareContact
-
   def parse_message(text, user)
 
     if text[0].downcase == 'h'
