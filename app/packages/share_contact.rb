@@ -21,7 +21,7 @@ module ShareContact
     # ]
 
     # make more flexible
-
+    recipient = ''
     msg.map! do |line|
       if line[0].downcase == 'p'
         p "test"
