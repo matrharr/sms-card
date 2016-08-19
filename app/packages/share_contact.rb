@@ -30,9 +30,9 @@ module ShareContact
     end
 
     # generalize
-
+    p sender
     user = User.find_by(phone_number: sender)
-
+    p user
     message_sent = "#{user.first_name} has sent you an SMSCard:\n
                     #{user.first_name} #{user.last_name}\n
                     #{job_title} at #{company}\n

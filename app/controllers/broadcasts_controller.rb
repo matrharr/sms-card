@@ -7,7 +7,6 @@ class BroadcastsController < ApplicationController
   include Parser
 
   def create
-    p params
     create_client
 
     message = params[:Body]
