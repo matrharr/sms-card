@@ -1,29 +1,17 @@
+require_relative '../packages/share_contact'
+
 class Parser
-
-  # including package
-
-  include ShareContact
 
   def parse_message(text, user)
 
-    if text[0].downcase == 'h'
+    if text[0..1].downcase == 'sc'
 
-      help_menu = "cat: concatenate files\n
-            pwd: print working directory\n
-            cd: change the working directory\n
-            cp: copy files\nenv: set environment\n
-            grep: search for pattern\n
-            ls: list contents\n"
-
-      return [user, help_menu]
-
-    else
-
-      # include ability to detect which package
-
-      sc_arr = bundle_info(text)
+      sc_arr = bundle_info(text, user)
 
       return sc_arr
+    else
+      p "Error parsing"
+
     end 
     
   end
