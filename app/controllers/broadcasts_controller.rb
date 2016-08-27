@@ -14,7 +14,19 @@ class BroadcastsController < ApplicationController
 
     payload = parse_message(message, user)
 
-    send_message(payload)
+    
+    if payload[0].is_a?(Array)
+      # iteratively send msgs
+      payload.each do |msg|
+        send_message(msg)
+      end
+
+    else
+      # send single msg
+      send_message(payload)
+
+    end
+
   end
 
   def index
