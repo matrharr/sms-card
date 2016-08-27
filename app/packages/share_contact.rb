@@ -22,7 +22,7 @@ module ShareContact
 
     # make more flexible
     recipient_number = ''
-    msg.map! do |line|
+    msg.map do |line|
       if line[0].downcase == 'p'
         line = line.split('')
         recipient_number = line[2..-1].join
@@ -35,7 +35,7 @@ module ShareContact
     first_line = msg[0]
     
     recipient_name = first_line[5..-1]
-
+    p recipient_name
     # generalize
     
     user = User.find_by(phone_number: sender_number)
