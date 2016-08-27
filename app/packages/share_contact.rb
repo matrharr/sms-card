@@ -24,16 +24,16 @@ module ShareContact
     recipient_number = ''
     msg.map! do |line|
       if line[0].downcase == 'p'
-        p "test"
         line = line.split('')
         recipient_number = line[2..-1].join
       end
     end
 
     recipient_name = ''
+    p msg
+    p msg[0]
     first_line = msg[0]
-    p first_line
-    p first_line[5..7]
+    
     recipient_name = first_line[5..-1]
 
     # generalize
