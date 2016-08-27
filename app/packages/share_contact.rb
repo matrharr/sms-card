@@ -32,6 +32,8 @@ module ShareContact
 
     recipient_name = ''
     first_line = msg[0]
+    p first_line
+    p first_line[5..7]
     recipient_name = first_line[5..-1]
 
     # generalize
