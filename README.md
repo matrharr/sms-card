@@ -1,24 +1,8 @@
-# README
+# SMS Card
+* A Mobile tool for business professionals to easily network with new acquaintances by sending their business cards via SMS.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Overview
+SMS Card provides a CLI-like interface that allows users to text flags and specialized parameters to send their professional networking data. The tool uses a Twilio webhook into a Rails API app to receive, parse, process and send text messages.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# How it works
+After signing up for the service, you will receive a phone number which will be your SMS Card Contact. Once you have your SMS Card Contact you can send messages to it for various tasks, such as sharing your professional information or saving a new contact.
