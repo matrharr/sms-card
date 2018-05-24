@@ -8,6 +8,6 @@ SMS Card provides a CLI-like interface that allows users to text flags and speci
 After signing up for the service, you will receive a phone number which will be your SMS Card Contact. Once you have your SMS Card Contact you can send messages to it for various tasks, such as sharing your professional information or saving a new contact.
 
 
-![Alt text](/public/image2.png)
+![Alt text](/public/sms-card.png)
 
 ![Alt text](/public/IMG_9187.jpeg)
